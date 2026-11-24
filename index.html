@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07111b" />
+    <meta name="description" content="SeaLynQ is exploring a low-power marine communication network designed to help boats share messages beyond conventional cellular coverage." />
+    <title>SeaLynQ — Connectivity beyond the coastline</title>
+    <link rel="icon" type="image/jpeg" href="public/sealynq-mark.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="refresh.css" />
+    <script type="importmap">
+      {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"}}
+    </script>
+  </head>
+  <body>
+    <header class="topbar" id="top">
+      <a class="brand" href="#top" aria-label="SeaLynQ home">
+        <span class="brand-mark"><img src="public/sealynq-mark.jpg" alt="" /></span>
+        <span class="brand-name">SeaLynQ<span class="brand-dot">.</span></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#mission">About</a><a href="#technology">Technology</a><a href="#hardware">Hardware</a><a href="#demo">Network demo</a><a href="#team">Team</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Let’s connect <span>↗</span></a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div id="ocean-scene" class="ocean-scene" aria-label="Interactive 3D illustration of boats sharing a simulated message across the ocean"></div>
+        <div class="hero-vignette"></div>
+        <div class="hero-content">
+          <div class="eyebrow"><span class="live-dot"></span> A new signal on the water <span class="eyebrow-rule"></span> <span class="eyebrow-loc">12° 58′ N &nbsp; 80° 15′ E</span></div>
+          <h1 id="hero-title">Connectivity<br /><span>beyond the</span> coastline<span class="title-period">.</span></h1>
+          <p class="hero-copy">A new way for fishing communities to stay connected at sea. SeaLynQ is exploring low-power wireless networks that carry messages beyond conventional cellular coverage.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#mission">Discover SeaLynQ <span>↘</span></a><a class="button button-quiet" href="#demo"><span class="play-icon">▶</span> See the network demo</a></div>
+        </div>
+        <div class="hero-aside"><span class="aside-line"></span><span>BUILT FOR THE OPEN WATER</span></div>
+        <div class="hero-bottom"><span class="scroll-cue"><span></span> Scroll to explore</span><span class="scene-caption">OCEAN NETWORK <span>·</span> VISUAL CONCEPT</span><span class="hero-index">01 <i>/</i> 06</span></div>
+        <div class="scene-hud hud-left"><span class="hud-label">MESH STATUS</span><strong><span class="live-dot"></span> SIMULATION READY</strong></div>
+        <div class="scene-hud hud-right"><span class="hud-label">ACTIVE NODES</span><strong id="node-count">04 <span>BOATS + SHORE</span></strong></div>
+      </section>
+
+      <section class="intro section-pad" id="mission">
+        <div class="section-kicker"><span>01 / THE CHALLENGE</span><span class="kicker-line"></span><span>OPEN WATER, OPEN QUESTIONS</span></div>
+        <div class="intro-grid"><h2>When the signal<br />fades, <em>what’s next?</em></h2><div class="intro-copy"><p>For many fishing boats, the shore is the edge of the network. Once beyond cellular coverage, sharing a position, a short update, or a call for assistance can become difficult.</p><p>SeaLynQ is a project exploring how small, low-power messages could travel between participating boats and toward a coastal gateway.</p><a class="text-link" href="#technology">Meet the approach <span>↗</span></a></div></div>
+        <div class="challenge-cards">
+          <article class="challenge-card"><span class="card-index">01</span><div class="card-icon icon-signal">⌁</div><h3>Coverage has limits</h3><p>Conventional cellular networks do not reach every part of the sea where boats operate.</p><span class="card-foot">BEYOND THE SHORELINE</span></article>
+          <article class="challenge-card"><span class="card-index">02</span><div class="card-icon icon-route">⤳</div><h3>Distance adds friction</h3><p>Coordinating with nearby crews and sharing useful updates can be harder offshore.</p><span class="card-foot">BOAT TO BOAT</span></article>
+          <article class="challenge-card"><span class="card-index">03</span><div class="card-icon icon-alert">＋</div><h3>Time matters</h3><p>When communication is limited, getting important information to others may take longer.</p><span class="card-foot">A PATH TO ASSISTANCE</span></article>
+        </div>
+        <div class="note"><span class="note-mark">i</span><p>SeaLynQ is an early-stage technology project. These use cases describe the challenge being explored, not a deployed emergency service.</p></div>
+      </section>
+
+      <section class="statement section-pad">
+        <div class="statement-orbit orbit-one"></div><div class="statement-orbit orbit-two"></div><div class="statement-orbit orbit-three"></div><div class="statement-core"><span class="core-ring"></span><span class="core-dot"></span></div>
+        <div class="statement-copy"><span class="mini-label">INTRODUCING SEALYNQ</span><h2>A little signal<br />can go <em>a long way.</em></h2><p>SeaLynQ brings together a compact boat-side device, a mobile interface, and a collaborative wireless network concept—designed around simple messages that can relay from boat to boat.</p><a class="button button-outline" href="#technology">Explore the technology <span>↗</span></a></div>
+        <span class="statement-coord">13° 04′ 08.1″ N<br />80° 17′ 22.4″ E</span>
+      </section>
+
+      <section class="technology section-pad" id="technology">
+        <div class="section-kicker"><span>02 / THE APPROACH</span><span class="kicker-line"></span><span>SMALL PACKETS. SHARED PATHS.</span></div>
+        <div class="technology-heading"><h2>Designed for the<br /><em>spaces in between.</em></h2><p>LoRa radio can send small data packets over long distances using little power. SeaLynQ explores whether participating boats can help pass those packets toward shore.</p></div>
+        <div class="flow-card">
+          <div class="flow-topline"><span>HOW A MESSAGE COULD TRAVEL</span><span class="demo-chip">CONCEPTUAL FLOW</span></div>
+          <div class="flow-track" aria-label="Boat A to Boat B to Boat C to coastal gateway to recipient">
+            <button class="flow-node active" data-step="0"><span class="node-illustration boat-ill"><i></i></span><span class="node-label">Boat A</span><span class="node-caption">MESSAGE SOURCE</span></button><span class="flow-link"><i></i></span>
+            <button class="flow-node" data-step="1"><span class="node-illustration boat-ill"><i></i></span><span class="node-label">Boat B</span><span class="node-caption">RELAY NODE</span></button><span class="flow-link"><i></i></span>
+            <button class="flow-node" data-step="2"><span class="node-illustration boat-ill"><i></i></span><span class="node-label">Boat C</span><span class="node-caption">RELAY NODE</span></button><span class="flow-link"><i></i></span>
+            <button class="flow-node" data-step="3"><span class="node-illustration gateway-ill"><i></i></span><span class="node-label">Coastal gateway</span><span class="node-caption">INTERNET BACKHAUL</span></button><span class="flow-link flow-link-dashed"><i></i></span>
+            <button class="flow-node" data-step="4"><span class="node-illustration recipient-ill">⌂</span><span class="node-label">Recipient</span><span class="node-caption">SHORE SIDE</span></button>
+          </div>
+          <div class="flow-description"><span class="flow-step" id="flow-step">STEP 01</span><p id="flow-description">A boat creates a short message, such as a position update, using the SeaLynQ device and app.</p><span class="flow-controls"><button id="flow-prev" aria-label="Previous step">←</button><button id="flow-next" aria-label="Next step">→</button></span></div>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-item"><span class="feature-glyph">〰</span><h3>LoRa radio</h3><p>Low-power wireless communication for small data packets over long distances.</p><span class="feature-num">01</span></article>
+          <article class="feature-item"><span class="feature-glyph">⌘</span><h3>Collaborative mesh</h3><p>Participating nodes could relay messages when a direct path is unavailable.</p><span class="feature-num">02</span></article>
+          <article class="feature-item"><span class="feature-glyph">◎</span><h3>Location context</h3><p>GPS coordinates and timestamps can help add context to shared updates.</p><span class="feature-num">03</span></article>
+          <article class="feature-item"><span class="feature-glyph">◇</span><h3>Privacy by design</h3><p>Security is a core design consideration as the system architecture develops.</p><span class="feature-num">04</span></article>
+          <article class="feature-item"><span class="feature-glyph">!</span><h3>Priority alerts</h3><p>The concept includes a path for priority messages to be shared across nodes.</p><span class="feature-num">05</span></article>
+          <article class="feature-item"><span class="feature-glyph">☼</span><h3>Power aware</h3><p>A compact, low-power design aims to suit the practical realities at sea.</p><span class="feature-num">06</span></article>
+        </div>
+        <div class="security-note"><div class="security-lock">◇</div><div><span class="mini-label">SECURITY IS A DESIGN PRIORITY</span><p>Encryption and message handling are under development. SeaLynQ does not yet claim a validated end-to-end security implementation.</p></div><a href="#contact" class="text-link">Talk security with us <span>↗</span></a></div>
+      </section>
+
+      <section class="demo-section section-pad" id="demo">
+        <div class="section-kicker"><span>03 / TRY THE CONCEPT</span><span class="kicker-line"></span><span>A SIMULATED NETWORK</span></div>
+        <div class="demo-heading"><div><h2>Watch a message<br /><em>find its way.</em></h2><p>Explore a simulated relay from boat to boat, then toward shore.</p></div><span class="big-demo-label">DEMO<br /><i>NOT LIVE DATA</i></span></div>
+        <div class="network-demo">
+          <div class="demo-visual">
+            <div class="demo-map-grid"></div><svg class="demo-lines" viewBox="0 0 960 400" preserveAspectRatio="none" aria-hidden="true"><path d="M180 230 Q320 130 420 205 T645 173 T820 225" /><path d="M180 230 Q280 300 420 205" class="line-secondary" /><circle cx="180" cy="230" r="5"/><circle cx="420" cy="205" r="5"/><circle cx="645" cy="173" r="5"/><circle cx="820" cy="225" r="5"/></svg>
+            <div class="map-node node-a"><span class="node-pulse"></span><span class="map-vessel">⌁</span><span class="map-name">BOAT A <i>ORIGIN</i></span></div><div class="map-node node-b"><span class="node-pulse"></span><span class="map-vessel">⌁</span><span class="map-name">BOAT B <i>RELAY</i></span></div><div class="map-node node-c"><span class="node-pulse"></span><span class="map-vessel">⌁</span><span class="map-name">BOAT C <i>RELAY</i></span></div><div class="map-node node-shore"><span class="node-pulse"></span><span class="shore-glyph">⌂</span><span class="map-name">COASTAL GATEWAY <i>BACKHAUL</i></span></div>
+            <div class="map-label map-range">DEMO NETWORK · 4 NODES</div><div class="map-label map-coord">12° 58′ N<br />80° 15′ E</div><div class="packet" id="packet"></div><div class="map-success" id="map-success">MESSAGE RECEIVED AT GATEWAY</div>
+          </div>
+          <div class="demo-control">
+            <div class="demo-control-head"><span class="demo-chip">SIMULATED DATA</span><span class="demo-clock">00:00:00</span></div>
+            <h3 id="demo-status-title">Network at rest</h3><p id="demo-status-copy">Start the simulation to see a small message travel across participating nodes.</p>
+            <div class="relay-list"><div class="relay-row active"><span class="relay-check">01</span><span>Boat A creates a message</span><span class="relay-state">READY</span></div><div class="relay-row"><span class="relay-check">02</span><span>Nearby boat receives packet</span><span class="relay-state">WAITING</span></div><div class="relay-row"><span class="relay-check">03</span><span>Packet reaches coastal gateway</span><span class="relay-state">WAITING</span></div></div>
+            <div class="demo-buttons"><button class="button button-primary" id="start-demo"><span>▶</span> Start network</button><button class="icon-button" id="pause-demo" aria-label="Pause simulation" title="Pause">Ⅱ</button><button class="icon-button" id="reset-demo" aria-label="Reset simulation" title="Reset">↺</button></div>
+            <div class="demo-disclaimer"><span>ⓘ</span><p>This is an illustrative simulation. SeaLynQ is not currently a live or safety-critical network.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hardware-section section-pad" id="hardware">
+        <div class="section-kicker"><span>04 / THE DEVICE</span><span class="kicker-line"></span><span>HARDWARE CONCEPT</span></div>
+        <div class="hardware-grid"><div class="hardware-copy"><span class="mini-label">THE BOAT-SIDE COMPANION</span><h2>Purposeful.<br /><em>Practical.</em><br />Made for the sea.</h2><p>A compact unit is envisioned to bring together the core parts of the SeaLynQ system. The prototype is in development; the illustration here is a concept, not a photograph of finished hardware.</p><a class="text-link" href="#contact">Discuss the prototype <span>↗</span></a></div><div class="hardware-stage"><div class="device-shadow"></div><div class="device"><div class="device-antenna"></div><div class="device-cap"></div><div class="device-face"><div class="device-leds"><i></i><i></i><i></i></div><div class="device-logo">S<span>Q</span></div><div class="device-wave">〰</div><span class="device-label">MARINE MESH NODE</span></div><div class="device-side"></div></div><span class="hardware-tag tag-radio"><i></i> LORA RADIO</span><span class="hardware-tag tag-gps"><i></i> GPS MODULE</span><span class="hardware-tag tag-power"><i></i> LOW-POWER DESIGN</span><span class="device-caption">ILLUSTRATIVE CONCEPT · NOT FINAL PROTOTYPE</span></div></div>
+        <div class="hardware-parts"><div><span>01</span><strong>Wireless radio</strong><small>LoRa communication</small></div><div><span>02</span><strong>Positioning</strong><small>GPS context</small></div><div><span>03</span><strong>Controller</strong><small>Embedded system</small></div><div><span>04</span><strong>Power</strong><small>Rechargeable, solar-assisted concept</small></div></div>
+      </section>
+
+      <section class="app-section section-pad" id="application">
+        <div class="section-kicker"><span>05 / THE APP</span><span class="kicker-line"></span><span>A CLEAR VIEW OF THE NETWORK</span></div>
+        <div class="app-grid"><div class="app-copy"><span class="mini-label">MARINE CONNECTIVITY IN YOUR HANDS</span><h2>Useful at a<br /><em>glance.</em></h2><p>The SeaLynQ app concept brings message sharing, location context, and device status into one simple interface. These screens are illustrative and describe planned product ideas.</p><div class="app-tabs" role="tablist" aria-label="App concept screens"><button class="app-tab selected" data-app="Home" role="tab" aria-selected="true">Home</button><button class="app-tab" data-app="Messages" role="tab" aria-selected="false">Messages</button><button class="app-tab" data-app="Map" role="tab" aria-selected="false">Location</button><button class="app-tab" data-app="Device" role="tab" aria-selected="false">Device</button></div></div>
+          <div class="phone-stage"><div class="phone-glow"></div><div class="phone"><div class="phone-notch"></div><div class="phone-screen"><div class="phone-status"><span>9:41</span><span>●●● ▰</span></div><div class="app-screen-title"><span>Good morning</span><strong>At sea, together.</strong></div><div class="app-status-card"><div class="app-status-icon">⌁</div><div><small>NETWORK STATUS</small><strong><i></i> Demo network</strong></div><span class="app-chevron">›</span></div><div class="app-map-card"><div class="mini-map-lines"><i></i><i></i><i></i></div><span class="mini-pin pin-one">●</span><span class="mini-pin pin-two">●</span><span class="mini-pin pin-three">●</span><small>YOUR LAST SHARED POSITION</small><strong>12° 58′ N &nbsp; 80° 15′ E</strong></div><div class="app-recent"><div><strong id="app-screen-label">Recent messages</strong><span>VIEW ALL</span></div><article><b>↗</b><span><strong>Check-in shared</strong><small>Position · 4 min ago</small></span><i>›</i></article><article><b>⌁</b><span><strong>Network update</strong><small>Relay confirmed · 12 min ago</small></span><i>›</i></article></div><div class="phone-nav"><span class="phone-nav-active">⌂<small>Home</small></span><span>▤<small>Messages</small></span><span>◎<small>Map</small></span><span>◉<small>Device</small></span></div></div></div><span class="app-concept-label">APP UI CONCEPT · DEMO CONTENT</span><div class="app-callout callout-one"><span>01</span> NETWORK STATUS</div><div class="app-callout callout-two"><span>02</span> SHARED LOCATION</div></div>
+        </div>
+        <div class="app-capabilities"><span>MESSAGING</span><i></i><span>GPS CONTEXT</span><i></i><span>NETWORK STATUS</span><i></i><span>DEVICE MANAGEMENT</span><i></i><span>PRIORITY ALERT CONCEPT</span></div>
+      </section>
+
+      <section class="impact-section section-pad" id="impact">
+        <div class="section-kicker"><span>05 / THE BIGGER PICTURE</span><span class="kicker-line"></span><span>BUILT WITH COMMUNITIES</span></div><div class="impact-grid"><div><h2>Technology with<br /><em>people at the center.</em></h2><p>Connectivity should answer to the people who depend on it. SeaLynQ’s long-term direction is to work alongside fishing communities, researchers, and coastal organizations to learn what is useful, accessible, and safe.</p><a class="button button-outline" href="#contact">Shape the conversation <span>↗</span></a></div><div class="impact-points"><article><span>01</span><div><h3>Listen first</h3><p>Understand how crews communicate today and what they need offshore.</p></div></article><article><span>02</span><div><h3>Build responsibly</h3><p>Test carefully with clear limits, honest claims, and community feedback.</p></div></article><article><span>03</span><div><h3>Connect the ecosystem</h3><p>Explore partnerships with research, coastal safety, and technology groups.</p></div></article></div></div>
+      </section>
+
+      <section class="team-section section-pad" id="team"><div class="section-kicker"><span>06 / THE PEOPLE</span><span class="kicker-line"></span><span>COLLABORATION MAKES IT REAL</span></div><div class="team-intro"><h2>Good ideas travel<br /><em>farther together.</em></h2><p>SeaLynQ brings together a mix of technical disciplines and community perspectives. We’re building the project with room for collaborators to help shape what comes next.</p></div><div class="team-grid"><article><span class="team-icon">⌖</span><span class="team-index">01</span><h3>Project leadership</h3><p>Direction, partnerships, and keeping the work connected to real needs.</p><small>FOUNDER / TEAM LEAD</small></article><article><span class="team-icon">⌁</span><span class="team-index">02</span><h3>Hardware & embedded</h3><p>Exploring the boat-side device, radio integration, and power system.</p><small>HARDWARE DEVELOPMENT</small></article><article><span class="team-icon">⌘</span><span class="team-index">03</span><h3>Software & networking</h3><p>Designing the app, packet flow, and network behavior.</p><small>SOFTWARE · RESEARCH</small></article><article><span class="team-icon">◎</span><span class="team-index">04</span><h3>Guidance & community</h3><p>Learning with advisors, institutions, and coastal communities.</p><small>MENTORS · PARTNERS</small></article></div><p class="team-note">Team names and portraits can be added as contributors confirm how they would like to be represented.</p></section>
+
+      <section class="contact-section section-pad" id="contact"><div class="contact-glow"></div><div class="section-kicker"><span>07 / NEXT STEPS</span><span class="kicker-line"></span><span>LET’S BUILD A BETTER CONNECTION</span></div><div class="contact-content"><span class="mini-label">FOR COMMUNITIES · RESEARCHERS · PARTNERS</span><h2>Every good connection<br />starts <em>somewhere.</em></h2><p>Interested in the project, the technology, or a community partnership? Tell us what matters to you.</p><form class="contact-form" id="contact-form"><label>Name<input name="name" required autocomplete="name" placeholder="Your name" /></label><label>Email<input name="email" type="email" required autocomplete="email" placeholder="you@example.com" /></label><label class="form-wide">I’m reaching out about<select name="category"><option>General enquiry</option><option>Community partnership</option><option>Research collaboration</option><option>Technology partnership</option><option>Media or other</option></select></label><label class="form-wide">Message<textarea name="message" required rows="3" placeholder="What would you like to explore together?"></textarea></label><button class="button button-primary contact-button" type="submit">Copy enquiry <span>↗</span></button><span class="form-hint" id="form-hint">Your enquiry will be copied so you can share it with the SeaLynQ team.</span></form></div><div class="contact-orbit"><span class="orbit-center">SQ</span></div></section>
+    </main>
+    <footer class="footer"><a class="brand" href="#top"><span class="brand-mark"><img src="public/sealynq-mark.jpg" alt="" /></span><span class="brand-name">SeaLynQ<span class="brand-dot">.</span></span></a><span class="footer-note">A marine connectivity project in development.</span><span class="footer-copy">© 2026 SEALYNQ · BUILT FOR THE OPEN WATER</span><a class="back-top" href="#top">BACK TO TOP ↑</a></footer>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
+
